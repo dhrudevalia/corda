@@ -11,6 +11,7 @@ Version 5.0
 
 * Removed ``finance-workflows`` dependency on jackson library.  The functions that used jackson (e.g. ``FinanceJSONSupport``) have been moved
   into IRS Demo.
+* Artemis broker logging below error level is re-enabled but directed at the diagnostic log files.
 
 .. _changelog_v4.2:
 
