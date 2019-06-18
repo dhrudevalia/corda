@@ -12,6 +12,12 @@ Version 5.0
 * Removed ``finance-workflows`` dependency on jackson library.  The functions that used jackson (e.g. ``FinanceJSONSupport``) have been moved
   into IRS Demo.
 
+* It is now possible to re-record transactions if a node wishes to record as an observer a transaction it has participated in. If this is
+  done, then the node may record new output states that are not relevant to the node.
+
+.. warning:: As the node is unable to resolve the forward chain of transactions, the node cannot know if these new output states have been
+   consumed. To resolve this, any consuming transaction must be sent to the node after the transaction that created the state.
+
 .. _changelog_v4.2:
 
 Version 4.2
