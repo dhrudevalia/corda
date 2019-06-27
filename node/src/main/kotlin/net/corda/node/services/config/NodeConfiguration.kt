@@ -82,7 +82,7 @@ interface NodeConfiguration {
     val flowOverrides: FlowOverrideConfig?
 
     val cordappSignerKeyFingerprintBlacklist: List<String>
-    val cryptoServiceTimeout: Duration get() = defaultCryptoServiceTimeout
+    val cryptoServiceTimeout: Duration get() = DEFAULT_CRYPTO_SERVICE_TIMEOUT
 
     val networkParameterAcceptanceSettings: NetworkParameterAcceptanceSettings
 
@@ -100,7 +100,7 @@ interface NodeConfiguration {
 
         internal val defaultAttachmentContentCacheSize: Long = 10.MB
         internal const val defaultAttachmentCacheBound = 1024L
-        internal val defaultCryptoServiceTimeout = Duration.ofSeconds(1)
+        internal val DEFAULT_CRYPTO_SERVICE_TIMEOUT = Duration.ofSeconds(1)
 
         const val cordappDirectoriesKey = "cordappDirectories"
 
